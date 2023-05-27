@@ -1,0 +1,42 @@
+body {
+    justify-content: center;
+    display: flex;
+    background-color: black;
+}
+
+#btn {
+    position: relative;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: aqua;
+    background-color: transparent;
+    border: 2px solid aqua;
+    transition: all .5s ease-in-out;
+}
+
+#btn:hover {
+    background-color: white;
+    color: black;
+}
+
+#btn::before {
+    content: '';
+    position: absolute;
+    background-color: transparent;
+    filter: blur(1em);
+    top: 80%;
+    width: 150px;
+    left: 0;
+    height: 50px;
+    transform: perspective(1em) rotatex(40deg) scale(1, 0.35);
+    transition: .5s ease-in-out;
+}
+
+#btn:hover::before {
+    background-color: aqua;
+    top: 90%;
+}
